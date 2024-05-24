@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='totoapicontroller',
-    version='1.0.0',
+    version='1.1.0',
     description='API Controller for Toto APIs',
     author='nicolasances',
     author_email='nicolas.matteazzi@gmail.com',
@@ -11,6 +11,7 @@ setup(
         "PyJWT",
         "Flask-Cors",
         "Flask", 
-        "google-cloud-secret-manager"
+        "google-cloud-secret-manager", 
+        "boto3"
     ]
 )

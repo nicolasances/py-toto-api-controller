@@ -61,7 +61,7 @@ def toto_delegate(config_class):
     return delegate
 
 
-def extract_info(request: Request) -> (str, str):
+def extract_info(request: Request) :
     """Extracts needed info from the request
     
     Returns cid and auth header
