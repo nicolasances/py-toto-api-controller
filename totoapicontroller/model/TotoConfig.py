@@ -32,7 +32,7 @@ class TotoConfig(ABC):
         if cloud_provider == CloudProvider.GCP:
             self.jwt_key = self.access_secret_version("jwt-signing-key")
         else: 
-            self.jwt_key = self.access_aws_secret_version(f"{self.environment}/jwt-signing-key", "eu-west-1")
+            self.jwt_key = self.access_aws_secret_version(f"toto/{self.environment}/jwt-signing-key", "eu-west-1")
         
     
     @abstractmethod
