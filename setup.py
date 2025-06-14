@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='totoapicontroller',
-    version='1.1.3',
+    version='1.1.4',
     description='API Controller for Toto APIs',
     author='nicolasances',
     author_email='nicolas.matteazzi@gmail.com',

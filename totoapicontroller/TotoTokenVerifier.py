@@ -45,4 +45,5 @@ class TotoTokenVerifier:
         except jwt.ExpiredSignatureError: 
             return TokenVerificationResult(code = 401, message = "JWT verification failed. Token expired.")
         except jwt.InvalidTokenError: 
+            print(f"JWT verification failed. Invalid token: {jwt_token}")
             return TokenVerificationResult(code = 401, message = "JWT verification failed. Invalid token.")
