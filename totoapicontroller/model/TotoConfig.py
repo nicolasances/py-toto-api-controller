@@ -39,6 +39,8 @@ class TotoConfig(ABC):
     def get_api_name(self) -> str: 
         pass
     
+    def is_path_excluded(self, path: str) -> bool:
+        return False
     
     def access_secret_version(self, secret_id, version_id="latest"):
         """
@@ -81,4 +83,4 @@ class TotoConfig(ABC):
 
         secret = get_secret_value_response['SecretString']
         
-        return json.loads(secret)["jwt-signing-key"]
+        return secret

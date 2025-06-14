@@ -84,12 +84,16 @@ def validate_request(request: Request, config: TotoConfig) -> ValidationResult:
     Returns:
         ValidationResult: the result of the validation. The flag "validation_passed" will indicate whether the validation was successfull of not
     """
+    # Extract the path from the request
+    path = request.path
+    
     # Extract needed info
     cid, auth_header = extract_info(request)
     
     # Verify that the Correlation Id was provided
     if not cid: 
-        return throw_validation_error(cid, 400, "No Correlation ID provided in the Request")
+        # Check if paths are excluded in the config file 
+        if not config.is_path_excluded(request.path):
     
     # Verify that an Authorization header was provided
     if not auth_header: 
