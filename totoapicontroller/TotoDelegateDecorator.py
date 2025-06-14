@@ -94,6 +94,7 @@ def validate_request(request: Request, config: TotoConfig) -> ValidationResult:
     if not cid: 
         # Check if paths are excluded in the config file 
         if not config.is_path_excluded(request.path):
+            return throw_validation_error(cid, 400, "No correlation id header provided in the Request")
     
     # Verify that an Authorization header was provided
     if not auth_header: 
