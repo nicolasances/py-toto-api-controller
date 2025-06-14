@@ -27,7 +27,7 @@ class TotoTokenVerifier:
         self.jwt_key = config.jwt_key
         self.jwt_toto_audience = config.jwt_expected_audience
 
-    def decode_jwt(token: str) -> str:
+    def decode_jwt(self, token: str) -> str:
         token_payload = token.split('.')[1]
         
         # Add padding if necessary
@@ -39,7 +39,7 @@ class TotoTokenVerifier:
         
         return decoded_token
 
-    def get_auth_provider(decoded_token: str) -> str:
+    def get_auth_provider(self, decoded_token: str) -> str:
         if 'authProvider' in decoded_token:
             return decoded_token['authProvider']
         
