@@ -16,6 +16,7 @@ class CloudProvider(Enum):
 class TotoConfig(ABC): 
     
     jwt_key: str
+    jwt_expected_audience: str
     environment: str
     
     def __init__(self, cloud_provider: CloudProvider = CloudProvider.GCP) -> None:
@@ -31,6 +32,7 @@ class TotoConfig(ABC):
         
         if cloud_provider == CloudProvider.GCP:
             self.jwt_key = self.access_secret_version("jwt-signing-key")
+            self.jwt_expected_audience = self.access_secret_version("toto-expected-audience")
         else: 
             self.jwt_key = self.access_aws_secret_version(f"toto/{self.environment}/jwt-signing-key", "eu-west-1")
         
