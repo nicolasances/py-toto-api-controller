@@ -8,6 +8,7 @@ This also provide simple logging utilities to uniform logs.
 
 ## Documentation
 The documentation of the versions, including a general "How to" can be found here: 
+ * [Version 2.0](./docs/v2.0.md)
  * [Version 1.1](./docs/v1.1.md)
  * [Version 1.0](./docs/v1.0.md)
 
