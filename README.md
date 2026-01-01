@@ -1,4 +1,10 @@
-# Toto API Controller for Python
+# ⚠️ DEPRECATED - Toto API Controller for Python
+
+> **This project is deprecated and no longer maintained.**
+> 
+> Please visit the [Toto Microservice SDK Repository](https://github.com/nicolasances/toto-microservice-sdk) for the latest version of the Toto Microservice SDK, which supports both Node.js and Python.
+
+---
 
 This project aims at simplifying the creationg of python microservices using Flask, by creating some decorators to be added to routes (API endpoints) that take care of:
  - Basic validation of HTTP Headers
